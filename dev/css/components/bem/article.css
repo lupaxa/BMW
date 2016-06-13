@@ -38,6 +38,7 @@
 
 }
 
+
 @component article-text-normal{
     padding-bottom: 2.5rem;
     font-family: Verdana, Geneva, sans-serif;
@@ -70,6 +71,8 @@
 
     }
 }
+
+/*----------------Tech table---------------*/
 
 @component technical-info{
     display: flex;

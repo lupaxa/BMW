@@ -1,0 +1,120 @@
+
+@component slider{
+    @descendent header{
+        position: relative;
+        padding: 0 3rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        &:hover .slider__message{
+        display: block;
+        }
+    }
+    @descendent num{
+        font-weight: 300;
+        margin-right: 0.5rem;
+        &:first-child{
+            margin-left: 1rem;
+        }
+    }
+    @descendent copyright{
+        padding: 0 3rem;
+        color: #8c8c89;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 2.2rem;
+    }
+    @descendent title{
+        line-height: 1.2;
+    }
+    @descendent current-slide{
+        padding: 0 3rem;
+        margin-bottom: 2rem;
+    }
+    @descendent nav{
+        background-color: #f9f8e6;
+        padding: 3.2rem;
+    }
+    @descendent message{
+        display: none;
+        position: absolute;
+        top: -6rem;
+        left: 8rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@component slider-list{
+    overflow: hidden;
+    @descendent box{
+        width: 200rem;
+    }
+    @descendent item{
+        float: left;
+        margin: 2.3rem 0 1.7rem 1.3rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        &:not(.slider-list__item_active):hover{
+             border: 1px solid #219ff7;
+             box-shadow: 0 0 13px #1878c3;
+         }
+        @modifier active{
+            border: 3px solid #fff;
+        }
+    }
+    @descendent item-link{
+        border: 1px solid transparent;
+        display: block;
+    }
+}
+
+@component slider-nav{
+    position: relative;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to top, #141413 0%, #141413 100%);
+    @descendent btn{
+        position: absolute;
+        opacity: 0.9;
+        top: 1.4rem;
+        cursor:pointer;
+        @modifier prev {
+            left:0;
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.75);
+            background-image: linear-gradient(to left, #2a2a2a 0%, #2a2a2a 31%, black 100%);
+            border-top-right-radius: 0.6rem;
+            border-bottom-right-radius: 0.6rem;
+        }
+        @modifier next {
+            right: 0;
+            box-shadow: -3px 0 5px rgba(0, 0, 0, 0.75);
+            background-image: linear-gradient(to right, #2a2a2a 0%, #2a2a2a 31%, black 100%);
+            border-top-left-radius: 0.6rem;
+            border-bottom-left-radius: 0.6rem;
+        }
+    }
+}
+
+
+
+@component slider-btn{
+    border: 1px solid #303232;
+    padding: 5.4rem 1.8rem;
+    cursor:pointer;
+
+    @modifier next {
+        right: 1rem;
+        border-top-left-radius: 0.6rem;
+        border-bottom-left-radius: 0.6rem;
+        background: url("../img/icon/slider_arrow.png") no-repeat center;
+        }
+
+    @modifier prev {
+        right: 1rem;
+        border-top-left-radius: 0.6rem;
+        border-bottom-left-radius: 0.6rem;
+        transform: rotate(180deg);
+        background: url("../img/icon/slider_arrow.png") no-repeat center;
+    }
+
+}
+
+

@@ -1,0 +1,70 @@
+@component footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @descendent item {
+        @modifier copyright{
+        margin-right: 1rem;
+        }
+    }
+}
+
+@component social{
+    display: flex;
+    @descendent item {
+        margin-right: 1.11rem;
+    }
+    @descendent link{
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url(../img/icon/social-sprite.png);
+
+        @modifier fb{
+
+        }
+        @modifier tw{
+            background-position-x: -26px;
+        }
+        @modifier in{
+            background-position-x: -52px;
+        }
+        @modifier gp{
+            background-position-x: -78px;
+        }
+        @modifier yt{
+            background-position-x: -104px;
+        }
+        @modifier rss{
+            background-position-x: -131px;
+        }
+    }
+}
+
+@component copyright{
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, sans-serif;
+}
+@component design-info{
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, sans-serif;
+    @descendent logo{
+        margin-right: 0.8rem;
+    }
+    @descendent info{
+        font-size: 1.1rem;
+
+    }
+    @descendent link{
+        @modifier name{
+            border-bottom: 1px solid #8b9191;
+        }
+    }
+    @descendent date{
+        display: block;
+        color: #8b9191;
+        font-size: 1.1rem;
+    }
+
+}

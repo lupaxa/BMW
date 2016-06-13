@@ -1,0 +1,290 @@
+@component sidebar {
+    @descendent row {
+        margin-bottom: 2.8rem;
+        @modifier tabs-block{
+            margin-bottom: 5.5rem;
+        }
+        @modifier quiz{
+            margin-bottom: 6.6rem;
+            border: 1px solid #dfe4e8;
+            position: relative;
+            &:before{
+            position: absolute;
+            top: 0.1rem;
+            content:"";
+            width: 100%;
+            height: 0.5rem;
+            display: block;
+            border-top: 1px solid #dfe4e8;
+            background: url("../img/quiz_shadow.png");
+            }
+        }
+        @modifier last-news{
+            .news-link__title{
+                font-family: 'Open Sans', sans-serif;
+                font-size:1.5rem;
+                line-height: 1.55;
+            }
+            .list-news__item{
+                margin-bottom: 2.6rem;
+            }
+
+        }
+    }
+}
+
+@component sidebar-tabs {
+    @descendent tabular-menu {
+        display: flex;
+        align-items:center;
+        margin-bottom: 2.6rem;
+    }
+    @descendent tabular-btn {
+        border-bottom: 1px dotted #4a5c68;
+        color: #4a5c68;
+        font-size: 1.5rem;
+        font-weight:600;
+        &:first-child{
+             margin-right: 0.8rem;
+         }
+        @modifier active{
+            padding: 1rem 2rem;
+            background-color: #fff;
+            color: #000;
+            -webkit-clip-path:  polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+            clip-path:  polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+            border-bottom: none;
+        }
+
+    }
+
+}
+
+/*---------------LIST NEWS----------------*/
+
+
+@component list-news {
+    @descendent item {
+        margin-bottom: 1.9rem;
+        font-family: Verdana, Geneva, sans-serif;
+        @modifier main{
+            .news-link__title{
+                font-weight: 600;;
+            }
+        }
+   }
+}
+
+@component news-link {
+    @descendent title {
+        padding-bottom: 0.7rem;
+        font-size: 1.3rem;
+        color: #1e6edb;
+        font-weight: 400;
+        line-height: 1.65;
+    }
+    @descendent img {
+        position:relative;
+        display: block;
+        height: 100%;
+        margin-bottom: 1rem;
+        &:after{
+             position: absolute;
+             bottom: -0.8rem;
+             z-index: -1;
+             content: "";
+             width: 100%;
+             height: 1.5rem;
+             background: url(../img/thumbnail_shadow.png) no-repeat center;
+
+         }
+    }
+
+    @descendent link {
+        border-bottom:1px solid #b3cef0;
+        &:hover{
+            color: #ea0b0b;
+            border-bottom:1px solid #ea0b0b;
+        }
+    }
+
+    @descendent comments {
+        padding: 0.2rem 0.6rem 0.9rem 0.6rem;
+        font-size: 1rem;
+        color: #fff;
+        margin-left: 0.5rem;
+        -webkit-clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+        clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+        background-image: url(../img/icon/commets_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    @descendent date {
+        color: #ababab;
+    }
+}
+
+
+/*-------QUIZ BLOCK--------*/
+
+
+@component quiz {
+    @descendent titile {
+        padding: 0 0.8rem 0 1.5rem;
+        margin-top: 1.9rem;
+        margin-bottom: 1rem;
+        font-size: 1.9rem;
+        font-weight: 400;
+    }
+    @descendent question {
+        padding: 0 0.8rem 0 1.5rem;
+        margin-bottom: 1.9rem;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 1.3rem;
+    }
+    @descendent message {
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+        padding-bottom: 1rem;
+    }
+    @descendent answer-text {
+        position: relative;
+        color: #454e53;
+        font-size: 1.3rem;
+    &:before{
+         content: "";
+         display: inline-block;
+         width: 1.5rem;
+         height: 1.5rem;
+         background-color: white;
+         border: 1px solid #dbdee1;
+         border-radius: 50%;
+         position: absolute;
+         left: -3rem;
+         box-shadow: inset 0 1px 3px rgba(102, 115, 124, 0.75);
+     }
+    }
+    @descendent answer {
+        padding: 0 0.8rem 0 1.5rem;
+        border-top: 1px dotted #dfe4e8;
+        @modifier active{
+            .quiz__answer-text{
+                color: #0b9bff;
+            }
+            .quiz__answer-text:before{
+            background-image: linear-gradient(to top, #dee5e9 0%, white 41%, white 100%);
+            border: 1px solid #6abdff;
+            box-shadow: inset 0 1px 3px rgba(102, 115, 124, 0.75), 0 0 5px rgba(40, 187, 255, 0.75);
+            }
+        }
+
+    }
+    @descendent list-answer {
+        position: relative;
+        padding: 0 0.8rem 0 1.1rem;
+    }
+    @descendent answer-label {
+        width: 100%;
+        display: inline-block;
+        padding: 1.9rem 0.8rem 1.2rem 1.5rem;
+        cursor: pointer;
+    }
+
+
+    @descendent submit {
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 1.8rem 0;
+        background-color: #edf3f6;
+        text-align: center;
+    }
+}
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    left: -999em;
+}
+
+input[type=radio]:checked + .quiz__answer-text:after{
+    position: absolute;
+    content: "\0020";
+    top: 0.5rem;
+    left: -2.6rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    width: 0.7px;
+    height: 0.7px;
+    background-image: linear-gradient(to top, black 0%, #b0b0b0 100%);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17);
+}
+
+
+/*--------------------------------------------------*/
+
+
+@component btn{
+    padding: 0.7rem 1.4rem;
+    background-image: linear-gradient(to top, #e1e4e7 0%, #f8fafb 100%);
+    border-top: 1px solid #d4dadf;
+    border-bottom: 1px solid #adb7bd;
+    border-left: 1px solid #bfc7cd;
+    border-right: 1px solid #bfc7cd;
+    box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.75);
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #45545e;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 0.6rem;
+}
+
+
+
+
+@component nav-list-block {
+    @descendent btn {
+        padding: 0.5rem 0.7rem;
+        border: 1px solid #bdc5cb;
+        box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.75);
+        background-image: linear-gradient(to top, #e1e4e7 0%, #f8fafb 100%);
+        display: table-cell;
+        cursor:pointer;
+        @modifier prev{
+            border-radius: 0.8rem 0 0 0.8rem;
+        }
+        @modifier next{
+            border-radius: 0 1rem 1rem 0;
+        }
+    }
+}
+
+@component btn-slide {
+    background: url(../img/icon/arrow_small.png) no-repeat center;
+    width: 0.6rem;
+    height: 0.7rem;
+    @modifier next{
+        transform: rotate(180deg);
+    }
+
+}
+
+
+/*----------LAST NEWS BLOCK--------------*/
+
+@component last-news {
+    @descendent header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+    @descendent title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+}
+

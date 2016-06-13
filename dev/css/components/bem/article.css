@@ -1,0 +1,125 @@
+
+
+
+
+@component article{
+    @descendent content{
+        padding: 0 3rem;
+        margin-bottom: 2rem;
+    }
+    @descendent header{
+        padding: 2.7rem 0 0.8rem 0;
+        color: #1e6edb;
+        font-size: 2.8rem;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    @descendent info{
+        color: #ababab;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 4.3rem;
+    }
+    @descendent author{
+        border-bottom: 1px solid #ababab;
+    }
+    @descendent announcement{
+        margin-bottom: 5rem;
+        margin-top: 1.7rem;
+        padding-right: 12rem;
+    }
+    @descendent technical-info{
+        padding-top: 0.7rem;
+        padding-bottom: 5.3rem;
+    }
+    @descendent slider{
+
+    }
+
+}
+
+@component article-text-normal{
+    padding-bottom: 2.5rem;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.65;
+    color: #4f4f4f;
+
+}
+@component announcement{
+    position: relative;
+    padding-left: 3.7rem;
+    margin-left: 4.9rem;
+    border-left: 3px solid #d1e6e9;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.65;
+    color: #4f4f4f;
+    transform: skewX(-20deg);
+    &:before{
+        position: absolute;
+        left: -55px;
+         transform: skewX(20deg);
+        content: "";
+        display: inline-block;
+        width: 37px;
+        height: 25px;
+        background-image: url(../img/icon/quotes.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+}
+
+@component technical-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, sans-serif;
+    @descendent table{
+        width: 56%;
+        padding-top: 2rem;
+    }
+    @descendent list{
+        border: 3px solid #d1e6e9;
+        width: 31%;
+        padding: 1.5rem 1.5rem 0.9rem 1.5rem;
+    }
+}
+
+
+@component technical-table{
+    width: 100%;
+    @descendent row{
+        display: table;
+        table-layout: auto;
+        width: 100%;
+        padding: 0.9rem 0 0.9rem 0;
+        border-top: 1px solid #e8edf0;
+        padding-left: 1.8rem;
+        letter-spacing: -0.3px;
+        &:first-child{
+            border-top: 2px solid #000;
+            padding-top: 1.4rem;
+        }
+    }
+    @descendent cell{
+        display: table-cell;
+        width: 50%;
+        color: #4f4f4f;
+        font-size: 1.3rem;
+    }
+}
+
+
+@component technical-list{
+    padding-left: 1.1rem;
+    color: #000;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, sans-serif;
+    @descendent item{
+        list-style-type: disc;
+        margin-bottom: 1rem;
+
+    }
+}

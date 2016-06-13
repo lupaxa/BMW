@@ -1,0 +1,154 @@
+@component header{
+
+    position:relative;
+
+    @descendent logo{
+        position: absolute;
+        top: 2rem;
+        left: 0.9rem;
+        width: 4.7rem;
+        height: 4.7rem;
+    }
+    @descendent row{
+        @modifier logo{
+            max-width: 87rem;
+        }
+        @modifier nav{
+            max-width: 90rem;
+        }
+    }
+
+}
+@component logo{
+    @descendent link{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@component hero-img{
+    @descendent bg-mask{
+        position: relative;
+        transform: skewX(-20deg);
+        overflow: hidden;
+        height: 28.5rem;
+        transform-origin: bottom;
+    }
+    @descendent bg{
+        height: 28.5rem;
+        background-image: url(../img/hero-img_bg.jpg);
+        transform: skew(20deg);
+        background-repeat: no-repeat;
+        background-position: -90px center;
+        background-size: 120%;
+    }
+    @descendent bg-img{
+        transform: skewX(20deg);
+        transform-origin: bottom;
+        width: 120%;
+        max-width: 120%;
+        position: absolute;
+        top: -285px;
+        left: 75px;
+    }
+    @descendent title{
+        position: absolute;
+        top: 46%;
+        right: 0;
+        padding: 0.75rem 4.3rem 0.8rem 3.7rem;
+        padding-right: 43px;
+        padding-left: 37px;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.61);
+        background-color: rgba(0,0,0,0.5);
+    }
+
+}
+@component img-title{
+    transform: skewX(20deg);
+    color: #fff;
+    font-size: 4.3rem;
+    font-weight: 700;
+    @descendent unit{
+        display: block;
+        line-height: 1;
+    }
+}
+
+
+ /*-----------NAVIGATION-------------*/
+
+@component nav{
+    display: flex;
+
+    @descendent login{
+        width: 22.2%;
+        padding: 22px 19px 15px 19px;
+        box-sizing: border-box;
+    }
+    @descendent menu{
+        flex-grow: 2;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+    }
+    @descendent  menu-bg{
+        background-color: white;
+        height: 28.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        transform: skewX(-20deg);
+        overflow: hidden;
+        transform-origin: bottom;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+
+@component login{
+    display: flex;
+    justify-content: center;
+    @descendent item{
+        font-size: 1.3rem;
+        color:#acb5bb;
+        margin-right: 0.7rem;
+        @modifier login{
+            color: #4a5c68;
+            border-bottom: 1px dotted #000;
+        }
+        @modifier registration{
+            color: #4a5c68;
+            border-bottom: 1px dotted #000;
+        }
+    }
+}
+@component menu{
+    display: flex;
+    width: 100%;
+    @descendent item{
+        margin-left:4.2rem;
+        padding-bottom: 1rem;
+        font-size: 1.9rem;
+        @modifier active{
+            border-bottom: 3px solid #7fd0ff;
+            .menu__link{
+                color:#000;
+             }
+        }
+
+    }
+    @descendent link{
+        color: #4a5c68;
+        &:not(.menu__link_active):hover{
+             color:#ea0b0b;
+             border-bottom:1px solid #ea0b0b;
+         }
+
+    }
+
+}

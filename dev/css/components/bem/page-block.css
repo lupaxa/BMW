@@ -1,0 +1,63 @@
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f7f9;
+}
+
+
+@component page-block{
+
+    @descendent header{
+        width: 95%;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+    @descendent content{
+        width: 95%;
+        max-width: 100rem;
+        padding-top: 7rem;
+        margin: 0 auto;
+    }
+
+    @descendent content-wrap{
+        max-width: 96rem;
+    }
+    @descendent footer-inner{
+        max-width: 70rem;
+        width: 73%;
+        padding-left: 3rem;
+        box-sizing: border-box;
+    }
+    @descendent footer{
+        width: 95%;
+        max-width: 100rem;
+        padding-top: 10rem;
+        padding-bottom: 8.5rem;
+        margin: 0 auto;
+    }
+}
+
+@component content {
+    display: flex;
+    justify-content: space-between;
+    @descendent main{
+        max-width: 70rem;
+        width: 73%;
+    }
+    @descendent sidebar{
+        max-width: 24rem;
+        width: 25%;
+    }
+}
+
+@component main{
+    width:100%;
+    max-width: 70rem;
+    box-shadow: 0 7px 12px rgba(80, 103, 119, 0.28);
+    background-color: #fff;
+}

@@ -80,7 +80,6 @@
 
         </div>
         <div class="page-block__content">
-            <div class="page-block__content-wrap">
                 <div class="content">
                     <div class="content__main">
                         <main class="main">
@@ -190,19 +189,21 @@
                                             <div class="slider__header">
                                                 <div class="slider__message">
                                                     <div class="message message_slider">
-                                                        <p class="message__text">
-                                                            Галерея доступна по
+                                                        <div class="message__text">
+                                                            <span class="message__text-unit">Галерея доступна по</span>
                                                             <a class="message__link" href="#">
                                                                 этой ссылке
                                                             </a>
-                                                        </p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p class="slider__title">Фотографии <span class="slider__num lider__num-current">8</span><span class="slider__num">/</span><span class="slider__num slider__num-all"" >24</span></p>
+                                                <h2 class="slider__title">Фотографии <span class="slider__num lider__num-current">8</span><span class="slider__num">/</span><span class="slider__num slider__num-all"" >24</span></h2>
                                             </div>
-                                            <div class="slider__current-slide">
-                                                <img src="img/bmw_1.png" alt="">
-                                            </div>
+                                            <ul class="slider__current-slide">
+                                                <li class="slider__current-slide-unit">
+                                                    <img class="slider__current-slide-img" src="img/bmw_1.png" alt="">
+                                                </li>
+                                            </ul>
                                             <p class="slider__copyright">
                                                 © Пресс-служба «BMW»
                                             </p>
@@ -220,40 +221,41 @@
                                                     </div>
 
                                                     <div class="slider__list">
-                                                        <ul class="slider-list">
-                                                            <div class="slider-list__box clearfix">
+
+                                                        <div class="slider-list__box">
+                                                            <ul class="slider-list clearfix">
                                                                 <li class="slider-list__item">
-                                                                    <a href="#" class="slider-list__item-link">
-                                                                        <img src="img/bmw-min_1.png"
-                                                                             class="slider-list__item-img">
-                                                                    </a>
-                                                                </li>
+                                                                        <a href="#" class="slider-list__item-link">
+                                                                            <img src="img/bmw-min_1.png"
+                                                                                 class="slider-list__item-img">
+                                                                        </a>
+                                                                    </li>
                                                                 <li class="slider-list__item slider-list__item_active">
-                                                                    <a href="#" class="slider-list__item-link">
-                                                                        <img src="img/bmw-min_2.png"
-                                                                             class="slider-list__item-img">
-                                                                    </a>
-                                                                </li>
+                                                                        <a href="#" class="slider-list__item-link">
+                                                                            <img src="img/bmw-min_2.png"
+                                                                                 class="slider-list__item-img">
+                                                                        </a>
+                                                                    </li>
                                                                 <li class="slider-list__item">
-                                                                    <a href="#" class="slider-list__item-link">
-                                                                        <img src="img/bmw-min_3.png"
-                                                                             class="slider-list__item-img">
-                                                                    </a>
-                                                                </li>
+                                                                        <a href="#" class="slider-list__item-link">
+                                                                            <img src="img/bmw-min_3.png"
+                                                                                 class="slider-list__item-img">
+                                                                        </a>
+                                                                    </li>
                                                                 <li class="slider-list__item">
-                                                                    <a href="#" class="slider-list__item-link">
-                                                                        <img src="img/bmw-min_4.png"
-                                                                             class="slider-list__item-img">
-                                                                    </a>
-                                                                </li>
+                                                                        <a href="#" class="slider-list__item-link">
+                                                                            <img src="img/bmw-min_4.png"
+                                                                                 class="slider-list__item-img">
+                                                                        </a>
+                                                                    </li>
                                                                 <li class="slider-list__item">
-                                                                    <a href="#" class="slider-list__item-link">
-                                                                        <img src="img/bmw-min_5.png"
-                                                                             class="slider-list__item-img">
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                        </ul>
+                                                                        <a href="#" class="slider-list__item-link">
+                                                                            <img src="img/bmw-min_5.png"
+                                                                                 class="slider-list__item-img">
+                                                                        </a>
+                                                                    </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -277,12 +279,12 @@
                                 <div class="sidebar-tabs"  ng-controller="TabController as tabCtrl">
                                     <div class="sidebar-tabs__tabular-menu">
                                         <a ng-click="tabCtrl.currentTab = 'read' "
-                                           data-tab="read" onclick="return false"
+                                           onclick="return false"
                                            ng-class="tabCtrl.currentTab == 'read' ? 'sidebar-tabs__tabular-btn_active' : ''"
                                            href="#"
                                            class="sidebar-tabs__tabular-btn ">Читают</a>
                                         <a ng-click="tabCtrl.currentTab = 'comment' "
-                                           data-tab="read" onclick="return false"
+                                           onclick="return false"
                                            ng-class="tabCtrl.currentTab == 'comment' ? 'sidebar-tabs__tabular-btn_active' : ''"
                                            href="#"
                                            class="sidebar-tabs__tabular-btn">Комментируют</a>
@@ -468,7 +470,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="page-block__footer">
             <div class="page-block__footer-inner">

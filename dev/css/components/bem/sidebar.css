@@ -40,15 +40,17 @@
         margin-bottom: 2.6rem;
     }
     @descendent tabular-btn {
+        margin: 1rem 2rem;
         border-bottom: 1px dotted #4a5c68;
         color: #4a5c68;
         font-size: 1.5rem;
         font-weight:600;
         &:first-child{
-             margin-right: 0.8rem;
+             /*margin-right: 0.8rem;*/
          }
         @modifier active{
             padding: 1rem 2rem;
+            margin: 0;
             background-color: #fff;
             color: #000;
             -webkit-clip-path:  polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);

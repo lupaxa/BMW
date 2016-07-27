@@ -25,6 +25,8 @@
     }
     @descendent title{
         line-height: 1.2;
+        font-size: 2.2rem;
+        font-weight: 400;
     }
     @descendent current-slide{
         padding: 0 3rem;
@@ -46,8 +48,10 @@
 
 @component slider-list{
     overflow: hidden;
+    width: 200rem;
     @descendent box{
-        width: 200rem;
+
+        overflow: hidden;
     }
     @descendent item{
         float: left;

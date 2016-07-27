@@ -80,8 +80,9 @@
     justify-content: space-between;
     font-family: Verdana, Geneva, sans-serif;
     @descendent table{
-        width: 56%;
-        padding-top: 2rem;
+        width: 37.5rem;
+        margin-right: 2.5rem;
+        margin-top: 1.4rem;
     }
     @descendent list{
         border: 3px solid #d1e6e9;
@@ -93,17 +94,24 @@
 
 @component technical-table{
     width: 100%;
+    display: table;
+    border-top: 2px solid #000;
+    /*padding-top: 1.4rem;*/
+    table-layout: fixed;
     @descendent row{
-        display: table;
-        table-layout: auto;
+        display: table-row;
+        /* table-layout: auto; */
         width: 100%;
-        padding: 0.9rem 0 0.9rem 0;
-        border-top: 1px solid #e8edf0;
-        padding-left: 1.8rem;
+        /* padding: 1.9rem 0 1.9rem 0; */
+        border-bottom: 1px solid #e8edf0;
+        /* padding-left: 1.8rem; */
         letter-spacing: -0.3px;
-        &:first-child{
-            border-top: 2px solid #000;
-            padding-top: 1.4rem;
+        height: 4rem;
+        vertical-align: middle;
+        &:first-child .technical-table__cell{
+             border:none;
+            /*border-top: 2px solid #000;*/
+            /*padding-top: 1.4rem;*/
         }
     }
     @descendent cell{
@@ -111,6 +119,10 @@
         width: 50%;
         color: #4f4f4f;
         font-size: 1.3rem;
+        vertical-align: middle;
+        border-top: 1px solid #e8edf0;
+        word-wrap: break-word;
+        padding-right: 1rem;
     }
 }
 
@@ -123,6 +135,6 @@
     @descendent item{
         list-style-type: disc;
         margin-bottom: 1rem;
-
+        word-wrap: break-word;
     }
 }
